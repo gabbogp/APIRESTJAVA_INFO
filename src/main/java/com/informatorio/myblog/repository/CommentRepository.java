@@ -12,5 +12,5 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 
     //Aca van las consultas(Querys)
     @Query(value="SELECT * FROM Comment c WHERE post_id = ?1 ORDER BY c.FechaCreacion  DESC LIMIT ?2", nativeQuery = true)
-    List<Comment> CommentsByPostId(Long postId, Integer num);
+    List<Comment> CommentsByPostId(Long post_id, Integer num);
 }

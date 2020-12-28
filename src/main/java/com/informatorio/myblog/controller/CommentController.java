@@ -38,4 +38,8 @@ public class CommentController {
     @GetMapping("/post")
     public ResponseEntity<?> getCommentsByPost(@RequestParam Long postId, @RequestParam Integer num) {
         return new ResponseEntity<>(commentService.getCommentsByPost(postId, num), HttpStatus.OK); }
+
+    public CommentController(CommentService commentService) {
+        this.commentService = commentService;
+    }
 }

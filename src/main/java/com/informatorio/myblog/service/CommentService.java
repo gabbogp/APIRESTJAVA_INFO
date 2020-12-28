@@ -32,6 +32,6 @@ public class CommentService {
         commentRepository.delete(comment);
     }
 
-    public List<Comment> getCommentsByPost(Long postId, Integer num) {
-        return commentRepository.CommentsByPostId(postId, num);  }
+    public List<Comment> getCommentsByPost(Long id, Integer num) {
+        return commentRepository.CommentsByPostId(id, num);  }
 }
