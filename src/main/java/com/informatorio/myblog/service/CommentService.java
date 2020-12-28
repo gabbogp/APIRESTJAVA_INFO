@@ -22,7 +22,7 @@ public class CommentService {
         return commentRepository.findAll().stream().map(CommentDTO::new).collect(Collectors.toList());
     }
 
-    public Comment findComment(Long commentId) { return commentRepository.getOne(commentId); }
+    public Comment findComment(Long id) { return commentRepository.getOne(id); }
 
     public CommentDTO updateComment(Comment updateC) {
         return new CommentDTO(commentRepository.save(updateC));
@@ -32,6 +32,6 @@ public class CommentService {
         commentRepository.delete(comment);
     }
 
-    public List<Comment> getCommentsByPost(Long id, Integer num) {
-        return commentRepository.CommentsByPostId(id, num);  }
+    public List<Comment> getCommentsByPost(Long post, Integer num) {
+        return commentRepository.CommentsByPostId(post, num);  }
 }
